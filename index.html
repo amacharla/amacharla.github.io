@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anoop | Linktree</title>
-    <!-- Favicon -->
     <link rel="icon" href="profilePictures/me2.jpg" type="image/x-icon" />
-    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
-  </head>
+
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "connect", {origin:"https://app.cal.com"});
+
+      // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+      // `data-cal-link="anoopm/connect"`
+      // data-cal-namespace="connect"
+      // `data-cal-config='{"layout":"month_view"}'`
+
+      Cal.ns.connect("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    </head>
 
   <body>
-    <!-- Parallax Pixel Background Animation -->
     <section class="animated-background">
       <div id="stars1"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
     </section>
-    <!-- End of Parallax Pixel Background Animation -->
-
     <a id="profilePicture" href="#popup">
       <img src="profilePictures/me2.jpg" alt="Profile Picture">
     </a>
@@ -65,7 +71,11 @@
       <a class="link" href="http://twitter.amachar.la" target="_blank">
         <i class="fab fa-twitter">&nbsp;</i>Twitter
       </a>
-      <a class="link" href="http://meet.amachar.la" target="_blank">
+      <a class="link"
+         href="#"
+         data-cal-link="anoopm/connect"
+         data-cal-namespace="connect"
+         data-cal-config='{"layout":"month_view"}'>
         <i class="fa fa-play-circle">&nbsp;</i>Schedule A Meeting
       </a>
     </div>
